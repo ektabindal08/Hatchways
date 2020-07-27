@@ -4,20 +4,24 @@ $white: #fff;
 $white-two: #aaa;
 body {
   color: #555;
-  background-color: #5B9EED;
+  background-color: #eee;
   font-family: sans-serif;
 }
 
 .list-wrapper {
-  max-width: 400px;
+  max-width: 48%;
   margin: 50px auto;
+  -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.25);
+  -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.25);
+  box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.25);
+  background: $white;
 }
 
 .list {
   background: $white;
   border-radius: 2px;
   list-style: none;
-  padding: 10px 20px;
+  padding: 10px;
 }
 
 .list-item {
@@ -31,22 +35,90 @@ body {
   }
   &-image {
     border-radius: 50%;
-    width: 64px;
+    width: 74px;
+    border: 1px solid grey;
+    margin-top: 10px;
   }
   &-content{
     margin-left: 20px;
+  
     h4, p{
       margin: 0;
     }
-    h4{
-      margin-top: 10px;
-      font-size: 18px;
+    h2{
+      margin-top: 0;
+      margin-bottom:0;
+      font-size: 26px;
     }
     p{
-      margin-top: 5px;
+      margin-top: 0;
       color: $white-two;
+      font-size: 12px;
+      margin-left: 10px;
     }
   }
+
+  & .expand-btn{
+    margin-left:auto;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    color: #aaa;
+    
+  }
+  & .accordion__heading{
+    &:focus{
+      outline: unset;
+    }
+  }
+  .expanded-data{
+    margin-left:94px;
+    & .score-result{
+      margin-left:10px
+    }
+
+    & .score-records{
+      margin-top: 0;
+      color: $white-two;
+      font-size: 12px;
+      margin-left: 10px;
+    }
+    & .tags{
+      padding: 5px 10px;
+      background: #eee;
+      border-radius: 2px;
+      line-height: 14px;
+      margin: 5px;
+    }
+    & .tags:not(:last-child){
+      margin-right:10px;
+    }
+    & .tags-section{
+      margin-top:20px;
+    }
+
+    & .add-tag-input{
+      width: 250px
+    }
+  }
+  &:focus{
+    outline: unset;
+  }
+  
+}
+.accordion__item:not(:last-child){
+  border-bottom:1px solid #eee;
 }
 
+.search-input-box{
+  width: 95%;
+  padding: 5px 10px;
+  border: unset;
+  border-bottom: 2px solid #eee;
+  margin: 5px 10px;
+  line-height: 28px;
+  &:focus{
+    outline: none;;
+  }
+}
 
